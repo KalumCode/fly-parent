@@ -1,4 +1,4 @@
-package com.ggread.core.starter.entity.param;
+package io.github.kalumcode.fly.core.starter.entity.param;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

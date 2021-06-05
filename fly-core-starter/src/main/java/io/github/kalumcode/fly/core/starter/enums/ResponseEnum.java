@@ -1,4 +1,4 @@
-package com.ggread.core.starter.enums;
+package io.github.kalumcode.fly.core.starter.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

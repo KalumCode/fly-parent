@@ -1,4 +1,4 @@
-package com.ggread.core.starter.entity.vo;
+package io.github.kalumcode.fly.core.starter.entity.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

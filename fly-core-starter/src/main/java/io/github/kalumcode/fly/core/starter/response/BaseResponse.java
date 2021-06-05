@@ -1,6 +1,6 @@
-package com.ggread.core.starter.response;
+package io.github.kalumcode.fly.core.starter.response;
 
-import com.ggread.core.starter.enums.ResponseEnum;
+import io.github.kalumcode.fly.core.starter.enums.ResponseEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

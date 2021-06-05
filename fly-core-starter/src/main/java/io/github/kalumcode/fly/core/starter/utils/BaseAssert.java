@@ -1,11 +1,11 @@
-package com.ggread.core.starter.utils;
+package io.github.kalumcode.fly.core.starter.utils;
 
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.BooleanUtil;
 import cn.hutool.core.util.StrUtil;
 
-import com.ggread.core.starter.enums.ResponseEnum;
-import com.ggread.core.starter.exception.BaseException;
+import io.github.kalumcode.fly.core.starter.enums.ResponseEnum;
+import io.github.kalumcode.fly.core.starter.exception.BaseException;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Collection;

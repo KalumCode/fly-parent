@@ -1,4 +1,4 @@
-package com.ggread.core.starter.constants;
+package io.github.kalumcode.fly.core.starter.constants;
 
 /**
  * Token相关的常量

@@ -1,10 +1,9 @@
-package com.ggread.core.starter.exception;
+package io.github.kalumcode.fly.core.starter.exception;
 
 import cn.hutool.core.util.StrUtil;
-import com.ggread.core.starter.enums.ResponseEnum;
+import io.github.kalumcode.fly.core.starter.enums.ResponseEnum;
 
 import java.io.Serializable;
-import java.text.MessageFormat;
 
 /**
  * @author: create by duanxiaoyong

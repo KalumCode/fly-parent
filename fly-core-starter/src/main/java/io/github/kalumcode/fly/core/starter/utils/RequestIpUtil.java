@@ -1,4 +1,4 @@
-package com.ggread.core.starter.utils;
+package io.github.kalumcode.fly.core.starter.utils;
 
 
 import cn.hutool.core.util.StrUtil;

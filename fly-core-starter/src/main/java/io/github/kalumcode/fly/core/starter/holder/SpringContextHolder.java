@@ -1,4 +1,4 @@
-package com.ggread.core.starter.holder;
+package io.github.kalumcode.fly.core.starter.holder;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
