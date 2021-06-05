@@ -1,1 +1,6 @@
-# kalum-spring-boot-framework
+# fly-parent
+
+#### 介绍
+平台父项目，管理平台各服务及组件版本
+
+
