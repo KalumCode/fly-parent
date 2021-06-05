@@ -42,6 +42,12 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
+        <!-- 解决 bootstrap.yml 配置文件无法生效 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+
         <!--swagger3-->
         <dependency>
             <groupId>io.springfox</groupId>
