@@ -6,6 +6,8 @@ import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,8 +24,9 @@ import java.util.List;
  * 1.0.0       Kalum       2021/6/6 8:52 上午   create
  * ------------------------------------------------------------
  */
-@Slf4j
 public final class TraceUtil {
+
+    private static final Logger logTrace = LoggerFactory.getLogger("TRACE_OUT");
 
     public static void info(String eventName, List<BaseTraceDTO> baseTraceDTO) {
         JSONArray jsonArray = new JSONArray();
@@ -39,7 +42,7 @@ public final class TraceUtil {
         json.putOpt("source", LogSourceEnum.PC.getCode());
         json.putOpt("commonField", getCommonField());
         json.putOpt("eventField", jsonArray);
-        log.info(JSONUtil.toJsonStr(json));
+        logTrace.info(JSONUtil.toJsonStr(json));
     }
 
     public static void info(String eventName, BaseTraceDTO baseTraceDTO) {
