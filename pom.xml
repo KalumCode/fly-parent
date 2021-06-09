@@ -14,6 +14,7 @@
     <modules>
         <module>fly-dependencies</module>
         <module>fly-core-starter</module>
+        <module>fly-mybatisplus-starter</module>
 
     </modules>
 
@@ -90,6 +91,12 @@
             <dependency>
                 <groupId>io.github.kalumcode</groupId>
                 <artifactId>fly-core-starter</artifactId>
+                <version>${fly-dependencies.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.kalumcode</groupId>
+                <artifactId>fly-mybatisplus-starter</artifactId>
                 <version>${fly-dependencies.version}</version>
             </dependency>
         </dependencies>
