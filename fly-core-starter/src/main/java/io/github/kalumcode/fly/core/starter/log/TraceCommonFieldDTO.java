@@ -17,7 +17,13 @@ import lombok.Data;
 public class TraceCommonFieldDTO {
 
     /**
-     * * 用户uid
+     * 用户uid
      */
     private Long memberId;
+
+
+    /**
+     * 数据来源
+     */
+    private String source;
 }

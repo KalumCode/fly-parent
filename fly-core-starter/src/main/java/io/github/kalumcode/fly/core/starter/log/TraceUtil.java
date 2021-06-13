@@ -26,27 +26,26 @@ import java.util.List;
  */
 public final class TraceUtil {
 
-    private static final Logger logTrace = LoggerFactory.getLogger("TRACE_OUT");
-
-    public static void info(String eventName, List<BaseTraceDTO> baseTraceDTO) {
-        JSONArray jsonArray = new JSONArray();
-        baseTraceDTO.stream().forEach(msg -> {
-            JSONObject eventJson = new JSONObject();
-            eventJson.putOpt("time", DateTime.now().toString());
-            eventJson.putOpt("eventName", eventName);
-            eventJson.putOpt("kv", msg);
-            jsonArray.add(eventJson);
-        });
-
-        JSONObject json = new JSONObject();
-        json.putOpt("source", LogSourceEnum.PC.getCode());
-        json.putOpt("commonField", getCommonField());
-        json.putOpt("eventField", jsonArray);
-        logTrace.info(JSONUtil.toJsonStr(json));
-    }
+    private static final Logger logTrace = LoggerFactory.getLogger("sys_trace");
 
     public static void info(String eventName, BaseTraceDTO baseTraceDTO) {
         info(eventName, Arrays.asList(baseTraceDTO));
+    }
+
+    public static void info(String eventName, List<BaseTraceDTO> baseTraceDTO) {
+        TraceCommonFieldDTO commonField = getCommonField();
+
+        baseTraceDTO.stream().forEach(msg -> {
+            JSONObject eventJson = new JSONObject();
+            eventJson.putOpt("time", DateTime.now().toString());
+            eventJson.putOpt("name", eventName);
+            eventJson.putOpt("kv", msg);
+
+            JSONObject json = new JSONObject();
+            json.putOpt("common", commonField);
+            json.putOpt("actions", eventJson);
+            logTrace.info(JSONUtil.toJsonStr(json));
+        });
     }
 
     private static TraceCommonFieldDTO getCommonField() {
@@ -54,6 +53,7 @@ public final class TraceUtil {
         Long currentMemberId = 1001L;
         TraceCommonFieldDTO dto = new TraceCommonFieldDTO();
         dto.setMemberId(currentMemberId);
+        dto.setSource(LogSourceEnum.APP.getMsg());
         return dto;
     }
 }
